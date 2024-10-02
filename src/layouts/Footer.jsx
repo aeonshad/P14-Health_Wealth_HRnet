@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import EmployeeService from '../services/employee.service';
 
 function Footer() {
     return (
@@ -10,9 +10,9 @@ function Footer() {
                         <a href="/">HRnet</a>
                     </div>
                     <div className="flex flex-col items-end gap-2 text-sm text-muted-foreground">
-                        <Link className="hover:underline" to="/employees">
-                            Employees
-                        </Link>
+                        <button className="hover:underline" onClick={() => EmployeeService.reset()}>
+                            Reset
+                        </button>
                     </div>
                 </div>
                 <div className="flex w-full items-center justify-center">

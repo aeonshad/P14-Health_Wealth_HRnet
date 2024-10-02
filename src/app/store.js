@@ -15,6 +15,9 @@ const employeeSlice = createSlice({
             const idEmployee = action.payload;
             state.employees = state.employees.filter((employee) => employee.id !== idEmployee);
         },
+        resetEmployees: (state, action) => {
+            state.employees = action.payload;
+        },
     },
 });
 
