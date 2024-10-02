@@ -5,6 +5,7 @@ import 'react-datepicker/dist/react-datepicker.css';
 import Select from 'react-dropdown-select';
 import { DEPARTMENTS, STATES, userSchema } from '../utils/userSchema';
 import { zodResolver } from '@hookform/resolvers/zod';
+import EmployeeService from '../services/employee.service';
 
 function Form() {
     const {
@@ -15,7 +16,7 @@ function Form() {
     } = useForm({ resolver: zodResolver(userSchema), mode: 'onChange' });
 
     const onSubmit = (data) => {
-        console.log({ data });
+        EmployeeService.add(data);
     };
 
     return (
