@@ -13,6 +13,6 @@ export const dateFormat = (date) => {
         month: '2-digit',
         day: '2-digit',
     });
-    console.log(formattedDate, dateObj);
+
     return formattedDate;
 };
