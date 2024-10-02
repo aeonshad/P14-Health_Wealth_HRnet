@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 function Footer() {
     return (
         <footer className="w-full border-t border-border">
@@ -8,15 +10,9 @@ function Footer() {
                         <a href="/">HRnet</a>
                     </div>
                     <div className="flex flex-col items-end gap-2 text-sm text-muted-foreground">
-                        <a className="hover:underline" href="/">
-                            Privacy
-                        </a>
-                        <a className="hover:underline" href="/">
-                            CGV
-                        </a>
-                        <a className="hover:underline" href="/">
+                        <Link className="hover:underline" to="/employees">
                             Employees
-                        </a>
+                        </Link>
                     </div>
                 </div>
                 <div className="flex w-full items-center justify-center">

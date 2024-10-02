@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import ThemeToggle from '../components/ThemeToggle';
 
 function Header() {
@@ -7,12 +8,12 @@ function Header() {
                 <div className="flex items-center gap-2">
                     <img src="./images/logo.png" alt="HRnet Logo" width={50} height={35} />
                     <div className="flex items-baseline gap-2">
-                        <a className="scroll-m-20 text-xl font-semibold tracking-tight font-caption" href="/">
+                        <Link className="scroll-m-20 text-xl font-semibold tracking-tight font-caption" to="/">
                             HRnet
-                        </a>
-                        <a className="font-medium hover:underline text-muted-foreground hover:text-foreground" href="/">
+                        </Link>
+                        <Link className="font-medium hover:underline text-muted-foreground hover:text-foreground" to="/employees">
                             Employees
-                        </a>
+                        </Link>
                     </div>
                 </div>
                 <div className="flex flex-1 items-center justify-end space-x-4">
