@@ -1,3 +1,5 @@
+import { dateFormat } from './dateFormat';
+
 export const columns = [
     {
         selector: (row) => row.firstname,
@@ -13,6 +15,7 @@ export const columns = [
     },
     {
         selector: (row) => row.dateOfBirth,
+        format: (row) => dateFormat(row.dateOfBirth),
         sortable: true,
         wrap: true,
         name: 'Birth',
@@ -43,6 +46,7 @@ export const columns = [
     },
     {
         selector: (row) => row.startDate,
+        format: (row) => dateFormat(row.startDate),
         sortable: true,
         wrap: true,
         name: 'StartDate',
