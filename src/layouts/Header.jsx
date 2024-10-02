@@ -6,7 +6,7 @@ function Header() {
         <header className="sticky top-0 z-40 w-full border-b bg-background">
             <div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
                 <div className="flex items-center gap-2">
-                    <img src="./images/logo.png" alt="HRnet Logo" width={50} height={35} />
+                    <img src="/images/logo.png" alt="HRnet Logo" width={50} height={35} />
                     <div className="flex items-baseline gap-2">
                         <Link className="scroll-m-20 text-xl font-semibold tracking-tight font-caption" to="/">
                             HRnet

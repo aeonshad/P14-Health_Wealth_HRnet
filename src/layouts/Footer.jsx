@@ -6,7 +6,7 @@ function Footer() {
             <div className="m-auto w-full max-w-3xl px-2 py-4">
                 <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between">
                     <div className="flex flex-row items-center gap-2">
-                        <img src="./images/logo.png" alt="HRnet Logo" width={40} height={30} />
+                        <img src="/images/logo.png" alt="HRnet Logo" width={40} height={30} />
                         <a href="/">HRnet</a>
                     </div>
                     <div className="flex flex-col items-end gap-2 text-sm text-muted-foreground">
