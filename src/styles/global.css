@@ -76,3 +76,7 @@ body {
     min-height: 100vh;
     flex-direction: column;
 }
+
+.datePicker {
+    width: 100%;
+}

@@ -1,9 +1,12 @@
-import { useForm } from 'react-hook-form';
+import { Controller, useForm } from 'react-hook-form';
 import { departmentList } from '../data/departments';
 import { statesList } from '../data/states';
+import DatePicker from 'react-datepicker';
+import { CalendarDays } from 'lucide-react';
+import 'react-datepicker/dist/react-datepicker.css';
 
 function Form() {
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit, control } = useForm();
 
     const onSubmit = (data) => {
         console.log({ data });
@@ -42,13 +45,27 @@ function Form() {
                     <label className="text-sm font-medium leading-none" htmlFor="dateOfBirth">
                         Date of Birth
                     </label>
-                    <input
-                        className="flex h-9 w-full rounded-md border border-border bg-input px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder-muted focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
-                        type="date"
-                        id="dateOfBirth"
-                        name="dateOfBirth"
-                        {...register('dateOfBirth')}
-                    />
+                    <div className="relative flex items-center">
+                        <Controller
+                            control={control}
+                            id="dateOfBirth"
+                            name="dateOfBirth"
+                            className="w-full"
+                            render={({ field }) => (
+                                <DatePicker
+                                    id="dateOfBirth"
+                                    name="dateOfBirth"
+                                    className="flex flex-col justify-center items-stretch h-9 w-full rounded-md border border-border bg-input px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder-muted focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 cursor-pointer"
+                                    placeholderText="Select date"
+                                    onChange={(date) => field.onChange(date)}
+                                    selected={field.value}
+                                    wrapperClassName="datePicker"
+                                    dateFormat="dd-MM-yyyy"
+                                />
+                            )}
+                        />
+                        <CalendarDays className="absolute right-3 text-muted pointer-events-none" />
+                    </div>
                 </div>
             </fieldset>
             <hr className="h-px my-1 border-border" />
@@ -127,13 +144,27 @@ function Form() {
                     <label className="text-sm font-medium leading-none" htmlFor="startDate">
                         Start Date
                     </label>
-                    <input
-                        className="flex h-9 w-full rounded-md border border-border bg-input px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder-muted focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
-                        type="date"
-                        id="startDate"
-                        name="startDate"
-                        {...register('startDate')}
-                    />
+                    <div className="relative flex items-center">
+                        <Controller
+                            control={control}
+                            name="startDate"
+                            id="startDate"
+                            className="w-full"
+                            render={({ field }) => (
+                                <DatePicker
+                                    name="startDate"
+                                    id="startDate"
+                                    className="flex flex-col justify-center items-stretch h-9 w-full rounded-md border border-border bg-input px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder-muted focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 cursor-pointer"
+                                    placeholderText="Select date"
+                                    onChange={(date) => field.onChange(date)}
+                                    selected={field.value}
+                                    wrapperClassName="datePicker"
+                                    dateFormat="dd-MM-yyyy"
+                                />
+                            )}
+                        />
+                        <CalendarDays className="absolute right-3 text-muted pointer-events-none" />
+                    </div>
                 </div>
             </fieldset>
             <div className="flex gap-4 justify-end mt-2">
