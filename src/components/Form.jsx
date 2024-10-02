@@ -12,9 +12,7 @@ function Form() {
         handleSubmit,
         formState: { errors },
         control,
-    } = useForm({ resolver: zodResolver(userSchema) });
-
-    console.log(errors);
+    } = useForm({ resolver: zodResolver(userSchema), mode: 'onChange' });
 
     const onSubmit = (data) => {
         console.log({ data });
@@ -24,7 +22,12 @@ function Form() {
         <form className="flex flex-col gap-4" onSubmit={handleSubmit(onSubmit)}>
             <fieldset className="flex gap-4">
                 <div className="space-y-2 w-2/5">
-                    <label className="text-sm font-medium leading-none" htmlFor="firstname">
+                    <label
+                        className={`text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 ${
+                            errors.firstname ? 'text-destructive' : ''
+                        }`}
+                        htmlFor="firstname"
+                    >
                         First Name
                     </label>
                     <input
@@ -35,9 +38,15 @@ function Form() {
                         {...register('firstname')}
                         placeholder="Example: John"
                     />
+                    {errors.firstname && <p className="text-destructive">{errors.firstname.message}</p>}
                 </div>
                 <div className="space-y-2 w-2/5">
-                    <label className="text-sm font-medium leading-none" htmlFor="lastname">
+                    <label
+                        className={`text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 ${
+                            errors.lastname ? 'text-destructive' : ''
+                        }`}
+                        htmlFor="lastname"
+                    >
                         Last Name
                     </label>
                     <input
@@ -48,9 +57,15 @@ function Form() {
                         {...register('lastname')}
                         placeholder="Example: Doe"
                     />
+                    {errors.lastname && <p className="text-destructive">{errors.lastname.message}</p>}
                 </div>
                 <div className="space-y-2 w-1/5">
-                    <label className="text-sm font-medium leading-none" htmlFor="dateOfBirth">
+                    <label
+                        className={`text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 ${
+                            errors.dateOfBirth ? 'text-destructive' : ''
+                        }`}
+                        htmlFor="dateOfBirth"
+                    >
                         Date of Birth
                     </label>
                     <div className="relative flex items-center">
@@ -74,12 +89,18 @@ function Form() {
                         />
                         <CalendarDays className="absolute right-3 text-muted pointer-events-none" />
                     </div>
+                    {errors.dateOfBirth && <p className="text-destructive">{errors.dateOfBirth.message}</p>}
                 </div>
             </fieldset>
             <hr className="h-px my-1 border-border" />
             <fieldset className="flex gap-4">
                 <div className="space-y-2 w-4/5">
-                    <label className="text-sm font-medium leading-none" htmlFor="street">
+                    <label
+                        className={`text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 ${
+                            errors.street ? 'text-destructive' : ''
+                        }`}
+                        htmlFor="street"
+                    >
                         Street
                     </label>
                     <input
@@ -90,9 +111,15 @@ function Form() {
                         {...register('street')}
                         placeholder="Example: 123 Main St"
                     />
+                    {errors.street && <p className="text-destructive">{errors.street.message}</p>}
                 </div>
                 <div className="space-y-2 w-1/5">
-                    <label className="text-sm font-medium leading-none" htmlFor="zipCode">
+                    <label
+                        className={`text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 ${
+                            errors.zipCode ? 'text-destructive' : ''
+                        }`}
+                        htmlFor="zipCode"
+                    >
                         Zip code
                     </label>
                     <input
@@ -103,11 +130,18 @@ function Form() {
                         {...register('zipCode')}
                         placeholder="XXXXX"
                     />
+                    {errors.zipCode && <p className="text-destructive">{errors.zipCode.message}</p>}
                 </div>
             </fieldset>
             <fieldset className="flex gap-4">
                 <div className="space-y-2 w-1/2">
-                    <span className="text-sm font-medium leading-none">State</span>
+                    <span
+                        className={`text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 ${
+                            errors.state ? 'text-destructive' : ''
+                        }`}
+                    >
+                        State
+                    </span>
                     <Controller
                         name="state"
                         id="state"
@@ -126,9 +160,15 @@ function Form() {
                             />
                         )}
                     />
+                    {errors.state && <p className="text-destructive">{errors.state.message}</p>}
                 </div>
                 <div className="space-y-2 w-1/2">
-                    <label className="text-sm font-medium leading-none" htmlFor="city">
+                    <label
+                        className={`text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 ${
+                            errors.city ? 'text-destructive' : ''
+                        }`}
+                        htmlFor="city"
+                    >
                         City
                     </label>
                     <input
@@ -139,12 +179,19 @@ function Form() {
                         {...register('city')}
                         placeholder="Example: San Francisco"
                     />
+                    {errors.city && <p className="text-destructive">{errors.city.message}</p>}
                 </div>
             </fieldset>
             <hr className="h-px my-1 border-border" />
             <fieldset className="flex gap-4">
                 <div className="space-y-2 w-1/2">
-                    <span className="text-sm font-medium leading-none">Department</span>
+                    <span
+                        className={`text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 ${
+                            errors.department ? 'text-destructive' : ''
+                        }`}
+                    >
+                        Department
+                    </span>
                     <Controller
                         name="department"
                         control={control}
@@ -163,9 +210,15 @@ function Form() {
                             />
                         )}
                     />
+                    {errors.department && <p className="text-destructive">{errors.department.message}</p>}
                 </div>
                 <div className="space-y-2 w-1/2">
-                    <label className="text-sm font-medium leading-none" htmlFor="startDate">
+                    <label
+                        className={`text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 ${
+                            errors.startDate ? 'text-destructive' : ''
+                        }`}
+                        htmlFor="startDate"
+                    >
                         Start Date
                     </label>
                     <div className="relative flex items-center">
@@ -189,6 +242,7 @@ function Form() {
                         />
                         <CalendarDays className="absolute right-3 text-muted pointer-events-none" />
                     </div>
+                    {errors.startDate && <p className="text-destructive">{errors.startDate.message}</p>}
                 </div>
             </fieldset>
             <div className="flex gap-4 justify-end mt-2">
