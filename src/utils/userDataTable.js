@@ -26,6 +26,7 @@ export const columns = [
         sortable: true,
         wrap: true,
         name: 'Street',
+        grow: 1.3,
     },
     {
         selector: (row) => row.city,
@@ -38,6 +39,7 @@ export const columns = [
         sortable: true,
         wrap: true,
         name: 'State',
+        grow: 1.1,
     },
     {
         selector: (row) => row.zipCode,
@@ -57,6 +59,7 @@ export const columns = [
         sortable: true,
         wrap: true,
         name: 'Department',
+        grow: 1.2,
     },
     {
         cell: (row) => (

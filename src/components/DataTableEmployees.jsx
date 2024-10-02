@@ -1,6 +1,7 @@
 import DataTable from 'react-data-table-component';
 import { columns } from '../utils/userDataTable';
 import { useEffect, useState } from 'react';
+import { tableCustomStyles } from '../styles/customStyle';
 
 function DataTableEmployees({ employees }) {
     const [data, setData] = useState(employees);
@@ -35,6 +36,7 @@ function DataTableEmployees({ employees }) {
                     onChange={(e) => setSearch(e.target.value)}
                 />
             }
+            customStyles={tableCustomStyles}
         />
     );
 }
