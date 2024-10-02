@@ -134,3 +134,78 @@ body {
     font-weight: bold;
     background-color: hsl(var(--primary));
 }
+
+.modal-overlay {
+    position: absolute;
+    z-index: 999;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.863);
+    top: 0;
+    left: 0;
+}
+
+.modal-container {
+    width: 450px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: hsl(var(--background));
+    border-radius: 0.8rem;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.3) 2px 2px 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    padding-top: 2.5rem;
+    padding-bottom: 2rem;
+}
+
+.modal-icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    opacity: 0.8;
+    stroke: hsl(var(--foreground));
+    width: 30px;
+    height: auto;
+}
+
+.modal-icon:hover {
+    opacity: 1;
+}
+
+.modal-header {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+    align-items: center;
+}
+
+.modal-title {
+    font-size: 1.85rem;
+    font-weight: bold;
+    color: hsl(var(--card-foreground));
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.modal-description {
+    font-size: 1rem;
+    color: hsl(var(--muted));
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    justify-content: space-evenly;
+    align-items: center;
+    border-top: 1px solid hsl(var(--border));
+    padding-top: 2.5rem;
+}
+.modal-img {
+    width: 130px;
+}

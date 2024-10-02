@@ -7,7 +7,7 @@ import { DEPARTMENTS, STATES, userSchema } from '../utils/userSchema';
 import { zodResolver } from '@hookform/resolvers/zod';
 import EmployeeService from '../services/employee.service';
 
-function Form() {
+function Form({ onOpen }) {
     const {
         register,
         handleSubmit,
@@ -17,6 +17,7 @@ function Form() {
 
     const onSubmit = (data) => {
         EmployeeService.add(data);
+        onOpen();
     };
 
     return (
