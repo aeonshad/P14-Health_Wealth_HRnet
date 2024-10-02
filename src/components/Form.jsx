@@ -4,6 +4,7 @@ import { statesList } from '../data/states';
 import DatePicker from 'react-datepicker';
 import { CalendarDays } from 'lucide-react';
 import 'react-datepicker/dist/react-datepicker.css';
+import Select from 'react-dropdown-select';
 
 function Form() {
     const { register, handleSubmit, control } = useForm();
@@ -100,16 +101,24 @@ function Form() {
             <fieldset className="flex gap-4">
                 <div className="space-y-2 w-1/2">
                     <span className="text-sm font-medium leading-none">State</span>
-                    <select
-                        className="flex h-9 w-full rounded-md border border-border bg-input px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder-muted focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
-                        {...register('state')}
-                    >
-                        {statesList.map((state) => (
-                            <option key={state.id} value={state.name}>
-                                {state.name}
-                            </option>
-                        ))}
-                    </select>
+                    <Controller
+                        name="state"
+                        id="state"
+                        control={control}
+                        render={({ field }) => (
+                            <Select
+                                options={statesList}
+                                searchable={true}
+                                searchBy="name"
+                                labelField="name"
+                                valueField="id"
+                                className="flex h-9 w-full rounded-md border border-border bg-input px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder-muted focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 custom-dropdown"
+                                onChange={(selected) => {
+                                    field.onChange(selected[0]?.name);
+                                }}
+                            />
+                        )}
+                    />
                 </div>
                 <div className="space-y-2 w-1/2">
                     <label className="text-sm font-medium leading-none" htmlFor="city">
@@ -129,16 +138,24 @@ function Form() {
             <fieldset className="flex gap-4">
                 <div className="space-y-2 w-1/2">
                     <span className="text-sm font-medium leading-none">Department</span>
-                    <select
-                        className="flex h-9 w-full rounded-md border border-border bg-input px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder-muted focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
-                        {...register('department')}
-                    >
-                        {departmentList.map((department) => (
-                            <option key={department.id} value={department.name}>
-                                {department.name}
-                            </option>
-                        ))}
-                    </select>
+                    <Controller
+                        name="department"
+                        control={control}
+                        render={({ field }) => (
+                            <Select
+                                id="department"
+                                options={departmentList}
+                                searchable={true}
+                                searchBy="name"
+                                labelField="name"
+                                valueField="id"
+                                className="flex h-9 w-full rounded-md border border-border bg-input px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder-muted focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 custom-dropdown"
+                                onChange={(selected) => {
+                                    field.onChange(selected[0]?.name);
+                                }}
+                            />
+                        )}
+                    />
                 </div>
                 <div className="space-y-2 w-1/2">
                     <label className="text-sm font-medium leading-none" htmlFor="startDate">
