@@ -1,13 +1,20 @@
 import { Controller, useForm } from 'react-hook-form';
-import { departmentList } from '../data/departments';
-import { statesList } from '../data/states';
 import DatePicker from 'react-datepicker';
 import { CalendarDays } from 'lucide-react';
 import 'react-datepicker/dist/react-datepicker.css';
 import Select from 'react-dropdown-select';
+import { DEPARTMENTS, STATES, userSchema } from '../utils/userSchema';
+import { zodResolver } from '@hookform/resolvers/zod';
 
 function Form() {
-    const { register, handleSubmit, control } = useForm();
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+        control,
+    } = useForm({ resolver: zodResolver(userSchema) });
+
+    console.log(errors);
 
     const onSubmit = (data) => {
         console.log({ data });
@@ -107,7 +114,7 @@ function Form() {
                         control={control}
                         render={({ field }) => (
                             <Select
-                                options={statesList}
+                                options={STATES}
                                 searchable={true}
                                 searchBy="name"
                                 labelField="name"
@@ -144,7 +151,7 @@ function Form() {
                         render={({ field }) => (
                             <Select
                                 id="department"
-                                options={departmentList}
+                                options={DEPARTMENTS}
                                 searchable={true}
                                 searchBy="name"
                                 labelField="name"
