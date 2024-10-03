@@ -34,7 +34,7 @@ export const tableCustomStyles = {
     },
     headCells: {
         style: {
-            color: 'white',
+            color: 'hsl(var(--primary-foreground))',
             opacity: '1',
             '&:hover': {
                 opacity: '0.9',
