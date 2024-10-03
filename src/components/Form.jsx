@@ -156,10 +156,11 @@ function Form({ onOpen }) {
                     </span>
                     <Controller
                         name="state"
-                        id="state"
                         control={control}
                         render={({ field }) => (
                             <Select
+                                id="state"
+                                additionalProps={{ role: 'combobox' }}
                                 options={STATES}
                                 searchable={true}
                                 searchBy="name"
@@ -210,6 +211,7 @@ function Form({ onOpen }) {
                         render={({ field }) => (
                             <Select
                                 id="department"
+                                additionalProps={{ role: 'combobox' }}
                                 options={DEPARTMENTS}
                                 searchable={true}
                                 searchBy="name"
