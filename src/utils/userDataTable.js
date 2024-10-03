@@ -7,6 +7,7 @@ export const columns = [
         sortable: true,
         wrap: true,
         name: 'FirstName',
+        grow: 1.1,
     },
     {
         selector: (row) => row.lastname,
