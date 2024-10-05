@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+# HRnet
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Available Scripts
+HRnet est une application de gestion des ressources humaines qui permet de gérer facilement les employés. Elle offre des fonctionnalités telles que l'ajout, la suppression et la validation des employés, ainsi qu'une interface utilisateur intuitive.
 
-In the project directory, you can run:
+## Table des matières
 
-### `npm start`
+-   [Fonctionnalités](#fonctionnalités)
+-   [Dépendances utilisées](#dépendances-utilisées)
+-   [Structure du projet](#structure-du-projet)
+-   [Installation](#installation)
+-   [Utilisation](#utilisation)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Fonctionnalités
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+-   Gestion des employés : Ajoutez, supprimez et modifiez les informations des employés.
+-   Validation des formulaires : Utilisation de Zod pour la validation des données.
+-   Interface utilisateur réactive : Conçue avec Tailwind CSS pour une expérience utilisateur fluide.
+-   Système de cache pour le stockage des données des employés.
+-   Affichage des messages d'erreur dans les formulaires.
+-   Table avec recherche et tri intégrés.
 
-### `npm test`
+## Dépendances utilisées
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+-   **React** : Bibliothèque JavaScript pour construire l'interface utilisateur.
+-   **Redux** : Gestion de l'état de l'application.
+-   **Redux Persist** : Persistant l'état de Redux à travers les rechargements de page.
+-   **React Router** : Navigation entre les différentes pages de l'application.
+-   **Tailwind CSS** : Framework CSS pour un design moderne et réactif.
+-   **React Hook Form** : Gestion des formulaires.
+-   **Zod** : Validation des schémas de données.
+-   **UUID** : Génération d'identifiants uniques pour les employés.
+-   **React Ease Modal** : Gestion des modales dans l'application.
+-   **React Dropdown Select** : Composant de sélection pour une meilleure interface utilisateur.
+-   **Lucide React** : Bibliothèque d'icônes React.
+-   **Next Themes** : Gestion des thèmes (clair/sombre) dans l'application.
+-   **React Datepicker** : Sélecteur de date pour une meilleure expérience utilisateur.
+-   **React Data Table Component** : Composant pour afficher des tableaux de données de manière performante.
 
-### `npm run build`
+## Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone le dépôt :
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    ```bash
+    git clone https://github.com/aeonshad/P14-Health_Wealth_HRnet
+    ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Accédez au répertoire du projet :
 
-### `npm run eject`
+    ```bash
+    cd hrnet
+    ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Installez les dépendances :
+    ```bash
+    npm install
+    ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Utilisation
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Pour démarrer l'application en mode développement, exécutez :
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+npm run start
+```
 
-## Learn More
+Ouvrez votre navigateur et accédez à [http://localhost:3000](http://localhost:3000).
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
