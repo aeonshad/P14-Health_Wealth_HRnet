@@ -43,7 +43,7 @@ function Form({ onOpen }) {
                         First Name
                     </label>
                     <input
-                        className="flex h-9 w-full rounded-md border border-border bg-input px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder-muted focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
+                        className="flex h-9 w-full rounded-md border border-border bg-input px-3 py-1 text-sm shadow-inner transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder-muted focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
                         type="text"
                         id="firstname"
                         name="firstname"
@@ -62,7 +62,7 @@ function Form({ onOpen }) {
                         Last Name
                     </label>
                     <input
-                        className="flex h-9 w-full rounded-md border border-border bg-input px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder-muted focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
+                        className="flex h-9 w-full rounded-md border border-border bg-input px-3 py-1 text-sm shadow-inner transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder-muted focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
                         type="text"
                         id="lastname"
                         name="lastname"
@@ -90,7 +90,7 @@ function Form({ onOpen }) {
                                 <DatePicker
                                     id="dateOfBirth"
                                     name="dateOfBirth"
-                                    className="flex flex-col justify-center items-stretch h-9 w-full rounded-md border border-border bg-input px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder-muted focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 cursor-pointer"
+                                    className="flex flex-col justify-center items-stretch h-9 w-full rounded-md border border-border bg-input px-3 py-1 text-sm shadow-inner transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder-muted focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 cursor-pointer"
                                     placeholderText="Select date"
                                     onChange={(date) => field.onChange(date)}
                                     selected={field.value}
@@ -116,7 +116,7 @@ function Form({ onOpen }) {
                         Street
                     </label>
                     <input
-                        className="flex h-9 w-full rounded-md border border-border bg-input px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder-muted focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
+                        className="flex h-9 w-full rounded-md border border-border bg-input px-3 py-1 text-sm shadow-inner transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder-muted focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
                         type="text"
                         id="street"
                         name="street"
@@ -135,7 +135,7 @@ function Form({ onOpen }) {
                         Zip code
                     </label>
                     <input
-                        className="flex h-9 w-full rounded-md border border-border bg-input px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder-muted focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
+                        className="flex h-9 w-full rounded-md border border-border bg-input px-3 py-1 text-sm shadow-inner transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder-muted focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
                         type="text"
                         id="zipCode"
                         name="zipCode"
@@ -166,7 +166,7 @@ function Form({ onOpen }) {
                                 searchBy="name"
                                 labelField="name"
                                 valueField="id"
-                                className="flex h-9 w-full rounded-md border border-border bg-input px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder-muted focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 custom-dropdown"
+                                className="flex h-9 w-full rounded-md border border-border bg-input px-3 py-1 text-sm shadow-inner transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder-muted focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 custom-dropdown"
                                 onChange={(selected) => {
                                     field.onChange(selected[0]?.name);
                                 }}
@@ -185,7 +185,7 @@ function Form({ onOpen }) {
                         City
                     </label>
                     <input
-                        className="flex h-9 w-full rounded-md border border-border bg-input px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder-muted focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
+                        className="flex h-9 w-full rounded-md border border-border bg-input px-3 py-1 text-sm shadow-inner transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder-muted focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
                         type="text"
                         id="city"
                         name="city"
@@ -217,7 +217,7 @@ function Form({ onOpen }) {
                                 searchBy="name"
                                 labelField="name"
                                 valueField="id"
-                                className="flex h-9 w-full rounded-md border border-border bg-input px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder-muted focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 custom-dropdown"
+                                className="flex h-9 w-full rounded-md border border-border bg-input px-3 py-1 text-sm shadow-inner transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder-muted focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 custom-dropdown"
                                 onChange={(selected) => {
                                     field.onChange(selected[0]?.name);
                                 }}
@@ -245,7 +245,7 @@ function Form({ onOpen }) {
                                 <DatePicker
                                     name="startDate"
                                     id="startDate"
-                                    className="flex flex-col justify-center items-stretch h-9 w-full rounded-md border border-border bg-input px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder-muted focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 cursor-pointer"
+                                    className="flex flex-col justify-center items-stretch h-9 w-full rounded-md border border-border bg-input px-3 py-1 text-sm shadow-inner transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder-muted focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 cursor-pointer"
                                     placeholderText="Select date"
                                     onChange={(date) => field.onChange(date)}
                                     selected={field.value}
@@ -262,14 +262,14 @@ function Form({ onOpen }) {
             <div className="flex gap-4 justify-end mt-2">
                 <button
                     type="reset"
-                    className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-secondary text-secondary-foreground shadow hover:bg-secondary/90 h-9 px-4 py-2"
+                    className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-secondary text-secondary-foreground shadow-innerver:bg-secondary/90 h-9 px-4 py-2 shadow-lg hover:bg-secondary/80 transition-all duration-300 ease-in-out transform hover:scale-105"
                     onClick={onReset}
                 >
                     Reset
                 </button>
                 <button
                     type="submit"
-                    className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground shadow hover:bg-primary/90 h-9 px-4 py-2 w-1/7"
+                    className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground shadow-innerver:bg-primary/90 h-9 px-4 py-2 w-1/7 shadow-lg hover:bg-primary/80 transition-all duration-300 ease-in-out transform hover:scale-105"
                 >
                     Save
                 </button>

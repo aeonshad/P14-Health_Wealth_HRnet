@@ -4,47 +4,39 @@
 
 @layer base {
     :root {
-        --background: 0 0% 98%;
-        --foreground: 120 27% 19%;
-        --card: 0 0% 100%;
-        --card-foreground: 120 27% 19%;
-        --popover: 0 0% 100%;
-        --popover-foreground: 120 27% 19%;
-        --primary: 70 38% 45%;
-        --primary-foreground: 240 2% 10%;
+        --background: 71 0% 97%;
+        --foreground: 71 27% 19%;
+        --card: 1 0% 99%;
+        --card-foreground: 71 27% 19%;
+        --primary: 71 49% 50%;
+        --primary-foreground: 277 15% 10%;
         --secondary: 50 30% 80%;
         --secondary-foreground: 50 30% 20%;
-        --muted: 0 0% 65%;
-        --muted-foreground: 50 30% 20%;
-        --accent: 70 38% 45%;
-        --accent-foreground: 240 2% 20%;
-        --destructive: 0 60% 45%;
+        --muted: 0 0% 50%;
+        --muted-foreground: 120 12% 29%;
+        --destructive: 0 60% 50%;
         --destructive-foreground: 0 0% 98%;
-        --border: 216 12% 84%;
-        --input: 210 20% 98%;
-        --ring: 70 38% 45%;
+        --border: 71 10% 70%;
+        --input: 71 0% 94%;
+        --ring: 71 49% 45%;
         --radius: 0.5rem;
     }
     .dark {
-        --background: 240 2% 20%;
+        --background: 277 5% 10%;
         --foreground: 240 3% 92%;
-        --card: 240 1% 28%;
+        --card: 277 1% 20%;
         --card-foreground: 240 3% 97%;
-        --popover: 120 20% 12%;
-        --popover-foreground: 240 3% 92%;
-        --primary: 70 38% 45%;
-        --primary-foreground: 88 10% 95%;
-        --secondary: 70 10% 40%;
-        --secondary-foreground: 50 10% 95%;
+        --primary: 71 49% 40%;
+        --primary-foreground: 277 15% 10%;
+        --secondary: 50 30% 80%;
+        --secondary-foreground: 50 30% 20%;
         --muted: 0 0% 70%;
         --muted-foreground: 50 10% 95%;
-        --accent: 70 38% 45%;
-        --accent-foreground: 88 10% 95%;
-        --destructive: 0 55% 55%;
+        --destructive: 0 60% 45%;
         --destructive-foreground: 0 0% 95%;
-        --border: 240 1% 66%;
-        --input: 240 1% 55%;
-        --ring: 70 38% 45%;
+        --border: 71 10% 45%;
+        --input: 240 1% 35%;
+        --ring: 71 49% 45%;
     }
 }
 
@@ -75,6 +67,10 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+}
+
+.text-stroke {
+    -webkit-text-stroke: 1px black;
 }
 
 .datePicker {

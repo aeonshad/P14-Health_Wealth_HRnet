@@ -13,7 +13,7 @@ function CreateEmployee() {
                 </h2>
             </div>
             <div className="w-full">
-                <div className="rounded-xl border border-border bg-card text-card-foreground shadow flex-[2]">
+                <div className="rounded-3xl border border-border bg-card text-card-foreground shadow-lg flex-[2]">
                     <div className="p-6 pt-0 mt-6">
                         <Form onOpen={() => setIsOpen(true)} />
                     </div>

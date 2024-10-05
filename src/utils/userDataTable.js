@@ -65,7 +65,7 @@ export const columns = [
     {
         cell: (row) => (
             <button
-                className="whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-destructive hover:text-destructive/80 h-6 px-3 bg-background"
+                className="whitespace-nowrap rounded-md text-sm font-medium  focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-destructive-foreground hover:bg-destructive/80 h-6 px-3 bg-destructive transition-all duration-100 ease-in-out transform hover:scale-105"
                 onClick={() => EmployeeService.delete(row.id)}
             >
                 Delete

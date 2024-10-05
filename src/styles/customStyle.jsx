@@ -2,19 +2,22 @@ export const tableCustomStyles = {
     table: {
         style: {
             backgroundColor: 'hsl(var(--card))', // theme.background.default
+            borderRadius: '0.4rem 0.4rem 0px 0px',
         },
     },
     header: {
         style: {
-            backgroundColor: 'hsl(var(--card))', // theme.background.default
+            backgroundColor: 'hsl(var(--primary))', // theme.background.default
+            marginTop: '50px',
         },
     },
     subHeader: {
         style: {
-            backgroundColor: 'hsl(var(--card))', // theme.background.default
-            minHeight: '52px',
+            backgroundColor: 'transparent', // theme.background.default
+            minHeight: '0px',
             padding: '0px',
             marginBottom: '10px',
+            marginTop: '0px',
         },
     },
     headRow: {
@@ -26,7 +29,7 @@ export const tableCustomStyles = {
             borderBottomStyle: 'solid',
             fontSize: '0.875rem',
             fontWeight: 700,
-            borderRadius: '0.4rem',
+            borderRadius: '0.4rem 0.4rem 0px 0px',
         },
         denseStyle: {
             minHeight: '32px',
@@ -82,6 +85,7 @@ export const tableCustomStyles = {
             borderTopStyle: 'solid',
             borderTopWidth: '1px',
             borderTopColor: 'hsl(var(--border))', // theme.divider.default
+            borderRadius: '0px 0px 0.4rem 0.4rem',
         },
         pageButtonsStyle: {
             borderRadius: '50%',
